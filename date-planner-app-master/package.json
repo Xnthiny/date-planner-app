@@ -11,12 +11,27 @@
   },
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "body-parser": "^1.18.3",
     "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "mysql2": "^1.5.3",
     "sequelize": "^4.38.0"
+=======
+    "bcrypt": "^3.0.5",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^1.5.3",
+    "nodemon": "^1.18.10",
+    "sequelize": "^4.38.0",
+    "jshint": "^2.10.2",
+    "mysql": "^2.16.0"
+>>>>>>> 5b21ca68bb3a24d79ef0ee52e822dba956d2f15b
   },
   "devDependencies": {
     "chai": "^4.1.2",

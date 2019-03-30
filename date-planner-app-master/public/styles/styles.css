@@ -1,3 +1,51 @@
 .list-group-item {
   line-height: 2.5;
 }
+<<<<<<< HEAD
+=======
+
+body {
+  background-color: #FFF9E3
+}
+
+#intro-modal {
+  background-color: rgb(235, 235, 235); 
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 auto;
+}
+
+.modal-title {
+  text-align: center; 
+  font-size: 15px;
+}
+#intro-container {
+  background-image: url(../../images/intro-img-png);
+  background-color: #fff;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+}
+
+/* card-test */
+
+.card {
+  display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    float: left;
+    
+}
+
+
+
+
+
+>>>>>>> 5b21ca68bb3a24d79ef0ee52e822dba956d2f15b

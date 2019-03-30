@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <title>Home Page</title>
+  <!-- Materlize Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Materlize Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="../public/styles/styles.css">
+
+  
+
+</head>
+
+<body>
+  
+    <div class="container">
+
+    <div class="card" style="width: 18rem;" data-id="1">
+        <img src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dinner for 2</h5>
+          <p class="card-text">A very nice dinner for you and your boo! Enjoy a bottle of wine...</p>
+          <p class="card-text">1000 Biscayne Blvd., Miami 33132</p>
+          <p class="card-text">$100</p>
+          <a href="#" class="btn btn-primary" data-id="1">Add to My List &hearts;</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" data-id="1">
+        <img src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dinner for 2</h5>
+          <p class="card-text">A very nice dinner for you and your boo! Enjoy a bottle of wine...</p>
+          <p class="card-text">1000 Biscayne Blvd., Miami 33132</p>
+          <p class="card-text">$100</p>
+          <a href="#" class="btn btn-primary" data-id="1">Add to My List &hearts;</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" data-id="1">
+        <img src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dinner for 2</h5>
+          <p class="card-text">A very nice dinner for you and your boo! Enjoy a bottle of wine...</p>
+          <p class="card-text">1000 Biscayne Blvd., Miami 33132</p>
+          <p class="card-text">$100</p>
+          <a href="#" class="btn btn-primary" data-id="1">Add to My List &hearts;</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;" data-id="1">
+        <img src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Dinner for 2</h5>
+          <p class="card-text">A very nice dinner for you and your boo! Enjoy a bottle of wine...</p>
+          <p class="card-text">1000 Biscayne Blvd., Miami 33132</p>
+          <p class="card-text">$100</p>
+          <a href="#" class="btn btn-primary" data-id="1">Add to My List &hearts;</a>
+        </div>
+      </div>
+
+    </div>
+
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script>
+
+<script>    
+
+$.get( "https://cors-anywhere.herokuapp.com/https://www.eventbriteapi.com/v3/events/search?token=JWFTSNNP5W6H4IMYUNR2&location.address=miami", function(data) {
+
+    console.log( data );
+
+    var i, text, card;
+
+
+    $(".container").empty() 
+
+    for (i = 0; i < data.events.length; i++) { 
+        text += data.events[i].name.text + "<br>";
+
+        card += `
+            <div class="card" style="width: 18rem;" data-id="1">
+            <img src="https://file.videopolis.com/D/9dc9f4ba-0b2d-4cbb-979f-fee7be8a4198/8485.11521.brussels.the-hotel-brussels.amenity.restaurant-AD3WAP2L-13000-853x480.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">${ data.events[i].name.text }</h5>
+            <p class="card-text">A very nice dinner for you and your boo! Enjoy a bottle of wine...</p>
+            <p class="card-text">1000 Biscayne Blvd., Miami 33132</p>
+            <p class="card-text">$100</p>
+            <a href="#" class="btn btn-primary" data-id="1">Add to My List &hearts;</a>
+            </div>
+            </div>
+        `
+
+        $(".container").append( card );
+
+    }
+
+} );
+
+
+
+</script>
+
+</html>
